@@ -1,0 +1,17 @@
+pipeline {
+    
+    agent {
+        docker { image 'python' }
+    }
+    stages {
+        stage('python prgram run') {
+            steps {
+                sh 'python --version'
+            }
+            steps{
+                sh 'cd pyth'
+                sh 'python fourth.py'
+            }
+        }
+    }
+}
